@@ -1,0 +1,221 @@
+22:16:49 **** Incremental Build of configuration Default for project RT-STM32L152-DISCOVERY ****
+make -j3 all 
+Compiling test.c
+Compiling testmbox.c
+Compiling testevt.c
+../../../test/rt/test.c: In function 'heartbeat':
+../../../test/rt/test.c:336:58: warning: unused parameter 'peak' [-Wunused-parameter]
+ int heartbeat(int adc, int* intervalN, int* status, int* peak,int* trough,int* thrsh,int* pl )
+                                                          ^
+../../../test/rt/test.c:336:68: warning: unused parameter 'trough' [-Wunused-parameter]
+ int heartbeat(int adc, int* intervalN, int* status, int* peak,int* trough,int* thrsh,int* pl )
+                                                                    ^
+../../../test/rt/test.c: In function 'TestThread':
+../../../test/rt/test.c:437:16: error: unknown type name 'ADCConversionGroup'
+   static const ADCConversionGroup convgrp = {
+                ^
+../../../test/rt/test.c:439:10: warning: excess elements in scalar initializer
+          1,
+          ^
+../../../test/rt/test.c:439:10: note: (near initialization for 'convgrp')
+In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
+                 from ../../../os/common/ports/ARMCMx/devices/STM32L1xx/cmparams.h:77,
+                 from ../../../os/rt/ports/ARMCMx/chcore.h:70,
+                 from ../../../os/rt/include/ch.h:74,
+                 from ../../../test/rt/test.c:25:
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: warning: excess elements in scalar initializer
+ #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
+                                              ^
+../../../test/rt/test.c:445:4: note: in expansion of macro 'ADC_CR1_RES_0'
+    ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
+    ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: note: (near initialization for 'convgrp')
+ #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
+                                              ^
+../../../test/rt/test.c:445:4: note: in expansion of macro 'ADC_CR1_RES_0'
+    ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
+    ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:820:46: warning: excess elements in scalar initializer
+ #define  ADC_CR2_SWSTART                     ((uint32_t)0x40000000)        /*!< Start Conversion of regular channels */
+                                              ^
+../../../test/rt/test.c:446:4: note: in expansion of macro 'ADC_CR2_SWSTART'
+    ADC_CR2_SWSTART | ADC_CR2_DELS_0,
+    ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:820:46: note: (near initialization for 'convgrp')
+ #define  ADC_CR2_SWSTART                     ((uint32_t)0x40000000)        /*!< Start Conversion of regular channels */
+                                              ^
+../../../test/rt/test.c:446:4: note: in expansion of macro 'ADC_CR2_SWSTART'
+    ADC_CR2_SWSTART | ADC_CR2_DELS_0,
+    ^
+../../../test/rt/test.c:449:10: warning: excess elements in scalar initializer
+          0,
+          ^
+../../../test/rt/test.c:449:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:450:10: warning: excess elements in scalar initializer
+          0,
+          ^
+../../../test/rt/test.c:450:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:451:10: warning: implicit declaration of function 'ADC_SMPR3_SMP_AN0' [-Wimplicit-function-declaration]
+          ADC_SMPR3_SMP_AN0(ADC_SAMPLE_16),
+          ^
+../../../test/rt/test.c:451:28: error: 'ADC_SAMPLE_16' undeclared (first use in this function)
+          ADC_SMPR3_SMP_AN0(ADC_SAMPLE_16),
+                            ^
+../../../test/rt/test.c:451:28: note: each undeclared identifier is reported only once for each function it appears in
+../../../test/rt/test.c:451:10: warning: excess elements in scalar initializer
+          ADC_SMPR3_SMP_AN0(ADC_SAMPLE_16),
+          ^
+../../../test/rt/test.c:451:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:454:10: warning: implicit declaration of function 'ADC_SQR1_NUM_CH' [-Wimplicit-function-declaration]
+          ADC_SQR1_NUM_CH(1),
+          ^
+../../../test/rt/test.c:454:10: warning: excess elements in scalar initializer
+../../../test/rt/test.c:454:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:455:10: warning: excess elements in scalar initializer
+          0,
+          ^
+../../../test/rt/test.c:455:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:456:10: warning: excess elements in scalar initializer
+          0,
+          ^
+../../../test/rt/test.c:456:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:457:10: warning: excess elements in scalar initializer
+          0,
+          ^
+../../../test/rt/test.c:457:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:458:10: warning: implicit declaration of function 'ADC_SQR5_SQ1_N' [-Wimplicit-function-declaration]
+          ADC_SQR5_SQ1_N(ADC_CHANNEL_IN1)//set ADC as pin PA1 (IN1) (HAS BEEN PULLED DOWN IN BOARD.H)
+          ^
+../../../test/rt/test.c:458:25: error: 'ADC_CHANNEL_IN1' undeclared (first use in this function)
+          ADC_SQR5_SQ1_N(ADC_CHANNEL_IN1)//set ADC as pin PA1 (IN1) (HAS BEEN PULLED DOWN IN BOARD.H)
+                         ^
+../../../test/rt/test.c:458:10: warning: excess elements in scalar initializer
+          ADC_SQR5_SQ1_N(ADC_CHANNEL_IN1)//set ADC as pin PA1 (IN1) (HAS BEEN PULLED DOWN IN BOARD.H)
+          ^
+../../../test/rt/test.c:458:10: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:460:8: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    int adc_oversample()
+        ^
+../../../test/rt/test.c: In function 'adc_oversample':
+../../../test/rt/test.c:466:17: error: unknown type name 'adcsample_t'
+                 adcsample_t buf[16];
+                 ^
+../../../test/rt/test.c:468:17: warning: implicit declaration of function 'adcAcquireBus' [-Wimplicit-function-declaration]
+                 adcAcquireBus(&ADCD1);
+                 ^
+../../../test/rt/test.c:468:32: error: 'ADCD1' undeclared (first use in this function)
+                 adcAcquireBus(&ADCD1);
+                                ^
+../../../test/rt/test.c:469:17: warning: implicit declaration of function 'adcConvert' [-Wimplicit-function-declaration]
+                 adcConvert(&ADCD1, &convgrp, buf, 16);
+                 ^
+../../../test/rt/test.c:470:17: warning: implicit declaration of function 'adcReleaseBus' [-Wimplicit-function-declaration]
+                 adcReleaseBus(&ADCD1);
+                 ^
+../../../test/rt/test.c: In function 'TestThread2':
+../../../test/rt/test.c:573:15: error: unknown type name 'ADCConversionGroup'
+  static const ADCConversionGroup convgrp = {
+               ^
+../../../test/rt/test.c:575:11: warning: excess elements in scalar initializer
+           1,
+           ^
+../../../test/rt/test.c:575:11: note: (near initialization for 'convgrp')
+In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
+                 from ../../../os/common/ports/ARMCMx/devices/STM32L1xx/cmparams.h:77,
+                 from ../../../os/rt/ports/ARMCMx/chcore.h:70,
+                 from ../../../os/rt/include/ch.h:74,
+                 from ../../../test/rt/test.c:25:
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: warning: excess elements in scalar initializer
+ #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
+                                              ^
+../../../test/rt/test.c:581:5: note: in expansion of macro 'ADC_CR1_RES_0'
+     ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
+     ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: note: (near initialization for 'convgrp')
+ #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
+                                              ^
+../../../test/rt/test.c:581:5: note: in expansion of macro 'ADC_CR1_RES_0'
+     ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
+     ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:820:46: warning: excess elements in scalar initializer
+ #define  ADC_CR2_SWSTART                     ((uint32_t)0x40000000)        /*!< Start Conversion of regular channels */
+                                              ^
+../../../test/rt/test.c:582:5: note: in expansion of macro 'ADC_CR2_SWSTART'
+     ADC_CR2_SWSTART | ADC_CR2_DELS_0,
+     ^
+../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:820:46: note: (near initialization for 'convgrp')
+ #define  ADC_CR2_SWSTART                     ((uint32_t)0x40000000)        /*!< Start Conversion of regular channels */
+                                              ^
+../../../test/rt/test.c:582:5: note: in expansion of macro 'ADC_CR2_SWSTART'
+     ADC_CR2_SWSTART | ADC_CR2_DELS_0,
+     ^
+../../../test/rt/test.c:585:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:585:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:586:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:586:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:587:29: error: 'ADC_SAMPLE_16' undeclared (first use in this function)
+           ADC_SMPR3_SMP_AN0(ADC_SAMPLE_16),
+                             ^
+../../../test/rt/test.c:587:11: warning: excess elements in scalar initializer
+           ADC_SMPR3_SMP_AN0(ADC_SAMPLE_16),
+           ^
+../../../test/rt/test.c:587:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:590:11: warning: excess elements in scalar initializer
+           ADC_SQR1_NUM_CH(1),
+           ^
+../../../test/rt/test.c:590:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:591:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:591:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:592:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:592:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:593:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:593:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:594:26: error: 'ADC_CHANNEL_IN2' undeclared (first use in this function)
+           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN2)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
+                          ^
+../../../test/rt/test.c:594:11: warning: excess elements in scalar initializer
+           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN2)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
+           ^
+../../../test/rt/test.c:594:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:596:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+     int adc_oversample()
+         ^
+../../../test/rt/test.c: In function 'adc_oversample':
+../../../test/rt/test.c:602:18: error: unknown type name 'adcsample_t'
+                  adcsample_t buf[16];
+                  ^
+../../../test/rt/test.c:604:33: error: 'ADCD1' undeclared (first use in this function)
+                  adcAcquireBus(&ADCD1);
+                                 ^
+../../../test/rt/test.c: At top level:
+../../../test/rt/test.c:45:45: warning: 'patterns' defined but not used [-Wunused-variable]
+ static ROMCONST struct testcase * ROMCONST *patterns[] = {
+                                             ^
+../../../test/rt/test.c:158:13: warning: 'print_tokens' defined but not used [-Wunused-function]
+ static void print_tokens(void) {
+             ^
+../../../test/rt/test.c:305:13: warning: 'execute_test' defined but not used [-Wunused-function]
+ static void execute_test(const struct testcase *tcp) {
+             ^
+../../../test/rt/test.c:323:13: warning: 'print_line' defined but not used [-Wunused-function]
+ static void print_line(void) {
+             ^
+../../../test/rt/test.c: In function 'heartbeat':
+../../../test/rt/test.c:422:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [build/obj/test.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+22:16:50 Build Finished (took 337ms)
+

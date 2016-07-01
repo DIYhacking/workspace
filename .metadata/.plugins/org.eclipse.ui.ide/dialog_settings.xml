@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/ARS/Software/ChibiStudio/workspace/receiver_sw"/>
+			<item value="/Users/ARS/Documents/EshirtDesigns/receiver_sw"/>
+			<item value="/Users/ARS/Documents/EshirtDesigns/receiver_sw/src"/>
+			<item value="/Users/ARS/Software/ChibiStudio/ChibiOS"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

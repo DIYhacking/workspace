@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;uunimittari1/debug/RT-STM32L152-DISCOVERY (OpenOCD, Flash and Run).launch&apos; to &apos;uunimittari1 (OpenOCD, Flash and Run).launch&apos;" description="Rename resource &apos;RT-STM32L152-DISCOVERY (OpenOCD, Flash and Run).launch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="debug/RT-STM32L152-DISCOVERY (OpenOCD, Flash and Run).launch" name="uunimittari1 (OpenOCD, Flash and Run).launch" stamp="1462954776675" updateReferences="true"/>
+</session>

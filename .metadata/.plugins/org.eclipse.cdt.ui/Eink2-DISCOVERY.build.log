@@ -1,0 +1,68 @@
+13:29:59 **** Incremental Build of configuration Default for project Eink2-DISCOVERY ****
+make -j3 all 
+Compiling crt0_v7m.s
+Compiling chcoreasm_v7m.s
+Compiling crt1.c
+Compiling vectors.c
+Compiling chsys.c
+Compiling chdebug.c
+Compiling chvt.c
+Compiling chschd.c
+Compiling chthreads.c
+Compiling chtm.c
+Compiling chdynamic.c
+Compiling chregistry.c
+Compiling chsem.c
+Compiling chmtx.c
+Compiling chcond.c
+Compiling chevents.c
+Compiling chmsg.c
+Compiling chmboxes.c
+Compiling chqueues.c
+Compiling chmemcore.c
+Compiling chheap.c
+Compiling chmempools.c
+Compiling chcore.c
+Compiling chcore_v7m.c
+Compiling osal.c
+Compiling hal.c
+Compiling st.c
+Compiling hal_buffers.c
+Compiling hal_queues.c
+Compiling hal_mmcsd.c
+Compiling pal.c
+Compiling serial.c
+Compiling nvic.c
+Compiling hal_lld.c
+Compiling stm32_dma.c
+Compiling st_lld.c
+Compiling pal_lld.c
+Compiling serial_lld.c
+Compiling board.c
+Compiling test.c
+Compiling testthd.c
+Compiling testsem.c
+Compiling testmtx.c
+Compiling testmsg.c
+Compiling testmbox.c
+Compiling testevt.c
+Compiling testheap.c
+Compiling testpools.c
+Compiling testdyn.c
+Compiling testqueues.c
+Compiling testsys.c
+Compiling testbmk.c
+Compiling main.c
+Linking build/ch.elf
+Creating build/ch.bin
+Creating build/ch.hex
+Creating build/ch.dmp
+Creating build/ch.list
+
+   text	   data	    bss	    dec	    hex	filename
+  27024	    504	  16200	  43728	   aad0	build/ch.elf
+
+Done
+
+13:30:04 Build Finished (took 5s.494ms)
+

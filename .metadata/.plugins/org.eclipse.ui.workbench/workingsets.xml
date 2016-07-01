@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1462951870280_1" label="STM32L152" name="STM32L152">
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/RT-STM32L152-DISCOVERY" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/receiver_sw" type="4"/>
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Test" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1462814910833_0" label="Window Working Set" name="Aggregate for window 1462814910832"/>
+<mruList name="STM32L152"/>
+</workingSetManager>
