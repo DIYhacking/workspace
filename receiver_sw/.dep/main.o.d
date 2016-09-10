@@ -79,9 +79,8 @@ build/obj/main.o: src/main.c chibios/os/kernel/include/ch.h src/chconf.h \
  ugfx/src/gwin/../../gfx.h ugfx/src/ginput/ginput.h \
  ugfx/src/ginput/../../gfx.h ugfx/src/gadc/gadc.h \
  ugfx/src/gadc/../../gfx.h ugfx/src/gaudio/gaudio.h \
- ugfx/src/gaudio/../../gfx.h src/shell_commands.h src/usb_usart.h \
- src/buttons.h src/sensor_task.h src/stm32l_rtc.h src/display.h \
- src/beeper.h src/alarm_task.h src/main_logic.h
+ ugfx/src/gaudio/../../gfx.h src/sensor_task.h src/display.h \
+ src/main_logic.h
 
 chibios/os/kernel/include/ch.h:
 
@@ -347,20 +346,8 @@ ugfx/src/gaudio/gaudio.h:
 
 ugfx/src/gaudio/../../gfx.h:
 
-src/shell_commands.h:
-
-src/usb_usart.h:
-
-src/buttons.h:
-
 src/sensor_task.h:
 
-src/stm32l_rtc.h:
-
 src/display.h:
-
-src/beeper.h:
-
-src/alarm_task.h:
 
 src/main_logic.h:

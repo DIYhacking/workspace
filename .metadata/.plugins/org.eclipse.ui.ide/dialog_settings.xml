@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/ARS/Software/ChibiStudio/workspaceCopy/receiver_sw1"/>
 			<item value="/Users/ARS/Software/ChibiStudio/workspace/receiver_sw"/>
 			<item value="/Users/ARS/Documents/EshirtDesigns/receiver_sw"/>
 			<item value="/Users/ARS/Documents/EshirtDesigns/receiver_sw/src"/>

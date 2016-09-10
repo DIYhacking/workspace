@@ -1,0 +1,8 @@
+10:25:25 **** Clean-only build of configuration Default for project E-tshirt ****
+make -j3 clean 
+Cleaning
+rm -fR .dep build
+Done
+
+10:25:26 Build Finished (took 656ms)
+

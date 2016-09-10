@@ -1,8 +1,20 @@
-22:16:49 **** Incremental Build of configuration Default for project RT-STM32L152-DISCOVERY ****
+11:36:07 **** Incremental Build of configuration Default for project RT-STM32L152-DISCOVERY ****
 make -j3 all 
 Compiling test.c
-Compiling testmbox.c
-Compiling testevt.c
+Compiling testmtx.c
+Compiling testmsg.c
+In file included from ../../../test/rt/testmtx.c:18:0:
+../../../test/rt/test.h:85:3: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   float TestThread2(); //LM35 //void *p//int
+   ^
+In file included from ../../../test/rt/testmsg.c:18:0:
+../../../test/rt/test.h:85:3: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   float TestThread2(); //LM35 //void *p//int
+   ^
+In file included from ../../../test/rt/test.c:28:0:
+../../../test/rt/test.h:85:3: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+   float TestThread2(); //LM35 //void *p//int
+   ^
 ../../../test/rt/test.c: In function 'heartbeat':
 ../../../test/rt/test.c:336:58: warning: unused parameter 'peak' [-Wunused-parameter]
  int heartbeat(int adc, int* intervalN, int* status, int* peak,int* trough,int* thrsh,int* pl )
@@ -112,6 +124,17 @@ In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
 ../../../test/rt/test.c:470:17: warning: implicit declaration of function 'adcReleaseBus' [-Wimplicit-function-declaration]
                  adcReleaseBus(&ADCD1);
                  ^
+../../../test/rt/test.c: In function 'TestThread':
+../../../test/rt/test.c:517:9: warning: unused variable 'range' [-Wunused-variable]
+     int range = map(sensorReading, sensorMin, sensorMax, 0, 11);
+         ^
+../../../test/rt/test.c:485:10: warning: unused variable 'delaytime' [-Wunused-variable]
+      int delaytime = ST2MS(delay);//system ticks to ms
+          ^
+../../../test/rt/test.c: At top level:
+../../../test/rt/test.c:571:7: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ float TestThread2(){//LM35 adc //void *p
+       ^
 ../../../test/rt/test.c: In function 'TestThread2':
 ../../../test/rt/test.c:573:15: error: unknown type name 'ADCConversionGroup'
   static const ADCConversionGroup convgrp = {
@@ -120,23 +143,15 @@ In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
            1,
            ^
 ../../../test/rt/test.c:575:11: note: (near initialization for 'convgrp')
+../../../test/rt/test.c:580:11: warning: excess elements in scalar initializer
+           0,
+           ^
+../../../test/rt/test.c:580:11: note: (near initialization for 'convgrp')
 In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
                  from ../../../os/common/ports/ARMCMx/devices/STM32L1xx/cmparams.h:77,
                  from ../../../os/rt/ports/ARMCMx/chcore.h:70,
                  from ../../../os/rt/include/ch.h:74,
                  from ../../../test/rt/test.c:25:
-../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: warning: excess elements in scalar initializer
- #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
-                                              ^
-../../../test/rt/test.c:581:5: note: in expansion of macro 'ADC_CR1_RES_0'
-     ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
-     ^
-../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:779:46: note: (near initialization for 'convgrp')
- #define  ADC_CR1_RES_0                       ((uint32_t)0x01000000)        /*!< Bit 0 */
-                                              ^
-../../../test/rt/test.c:581:5: note: in expansion of macro 'ADC_CR1_RES_0'
-     ADC_CR1_RES_0,//set control register 1 in ADC to 10 bit resolution
-     ^
 ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l152xb.h:820:46: warning: excess elements in scalar initializer
  #define  ADC_CR2_SWSTART                     ((uint32_t)0x40000000)        /*!< Start Conversion of regular channels */
                                               ^
@@ -180,11 +195,11 @@ In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
            0,
            ^
 ../../../test/rt/test.c:593:11: note: (near initialization for 'convgrp')
-../../../test/rt/test.c:594:26: error: 'ADC_CHANNEL_IN2' undeclared (first use in this function)
-           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN2)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
+../../../test/rt/test.c:594:26: error: 'ADC_CHANNEL_IN10' undeclared (first use in this function)
+           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN10)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
                           ^
 ../../../test/rt/test.c:594:11: warning: excess elements in scalar initializer
-           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN2)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
+           ADC_SQR5_SQ1_N(ADC_CHANNEL_IN10)//set ADC as pin PA2 (IN2) (HAS BEEN PULLED DOWN IN BOARD.H)
            ^
 ../../../test/rt/test.c:594:11: note: (near initialization for 'convgrp')
 ../../../test/rt/test.c:596:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
@@ -217,5 +232,5 @@ In file included from ../../../os/ext/CMSIS/ST/STM32L1xx/stm32l1xx.h:161:0,
 make: *** [build/obj/test.o] Error 1
 make: *** Waiting for unfinished jobs....
 
-22:16:50 Build Finished (took 337ms)
+11:36:08 Build Finished (took 503ms)
 

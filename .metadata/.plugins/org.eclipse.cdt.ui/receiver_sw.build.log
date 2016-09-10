@@ -1,189 +1,83 @@
-16:30:57 **** Build of configuration Default for project receiver_sw ****
+17:56:37 **** Incremental Build of configuration Default for project receiver_sw ****
 make -j3 all 
-Compiler Options
-arm-none-eabi-gcc -c -mcpu=cortex-m3 -DENABLE_DEBUG=0 -Os -g -gdwarf-2 -g3 -fno-omit-frame-pointer -fno-common -std=gnu99 -DEINK_WRITECOUNT=3 -DEINK_NUMBUFFERS=80 -ffunction-sections -fdata-sections -fno-common -Wall -Wa,-alms=build/lst/ -DTHUMB_PRESENT -mno-thumb-interwork -DTHUMB_NO_INTERWORKING -MD -MP -MF .dep/build.d -I. -Ichibios/os/ports/common/ARMCMx/CMSIS/include -Ichibios/os/ports/common/ARMCMx -Ichibios/os/ports/GCC/ARMCMx -Ichibios/os/ports/GCC/ARMCMx/STM32L1xx -Ichibios/os/kernel/include -Ichibios/os/hal/include -Ichibios/os/hal/platforms/STM32L1xx -Ichibios/os/hal/platforms/STM32 -Ichibios/os/hal/platforms/STM32/GPIOv2 -Ichibios/os/hal/platforms/STM32/I2Cv1 -Ichibios/os/hal/platforms/STM32/SPIv1 -Ichibios/os/hal/platforms/STM32/TIMv1 -Ichibios/os/hal/platforms/STM32/USARTv1 -Ichibios/os/hal/platforms/STM32/USBv1 -Iugfx -Iugfx/3rdparty/tinygl-0.4-ugfx/include -Iugfx/drivers/gdisp/ED060SC4 -Ichibios/os/various -Isrc -Ibaselibc/include main.c -o main.o
-
-mkdir -p build/obj
-mkdir -p build/lst
-Compiling crt0.c
-Compiling vectors.c
-Compiling chcore.c
-Compiling chcore_v7m.c
-Compiling nvic.c
-Compiling chsys.c
-Compiling chdebug.c
-Compiling chlists.c
-Compiling chvt.c
-Compiling chschd.c
-Compiling chthreads.c
-Compiling chdynamic.c
-Compiling chregistry.c
-Compiling chsem.c
-Compiling chmtx.c
-Compiling chcond.c
-Compiling chevents.c
-Compiling chmsg.c
-Compiling chmboxes.c
-Compiling chqueues.c
-Compiling chmemcore.c
-Compiling chheap.c
-Compiling chmempools.c
-Compiling hal.c
-Compiling adc.c
-Compiling can.c
-Compiling ext.c
-Compiling gpt.c
-Compiling i2c.c
-Compiling icu.c
-Compiling mac.c
-Compiling mmc_spi.c
-Compiling mmcsd.c
-Compiling pal.c
-Compiling pwm.c
-Compiling rtc.c
-Compiling sdc.c
-Compiling serial.c
-Compiling serial_usb.c
-Compiling spi.c
-Compiling tm.c
-Compiling uart.c
-Compiling usb.c
-Compiling stm32_dma.c
-Compiling hal_lld.c
-Compiling adc_lld.c
-Compiling ext_lld_isr.c
-Compiling ext_lld.c
-Compiling pal_lld.c
-Compiling i2c_lld.c
-Compiling spi_lld.c
-Compiling gpt_lld.c
-Compiling icu_lld.c
-Compiling pwm_lld.c
-Compiling serial_lld.c
-Compiling uart_lld.c
-Compiling usb_lld.c
-Compiling gfx.c
-Compiling gos_chibios.c
-ugfx/src/gos/gos_chibios.c: In function 'gfxThreadCreate':
-ugfx/src/gos/gos_chibios.c:161:10: warning: implicit declaration of function 'chThdCreateFromHeap' [-Wimplicit-function-declaration]
-   return chThdCreateFromHeap(0, stacksz, prio, (tfunc_t)fn, param);
-          ^
-ugfx/src/gos/gos_chibios.c:161:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
-Compiling gos_freertos.c
-Compiling gos_win32.c
-Compiling gos_linux.c
-Compiling gos_osx.c
-Compiling gos_raw32.c
-Compiling gos_ecos.c
-Compiling gos_rawrtos.c
-Compiling gos_arduino.c
-Compiling gos_cmsis.c
-Compiling gos_nios.c
-Compiling gos_x_threads.c
-Compiling gos_x_heap.c
-Compiling gdriver.c
-Compiling gqueue.c
-Compiling gdisp.c
-Compiling gdisp_fonts.c
-Compiling gdisp_pixmap.c
-Compiling gdisp_image.c
-Compiling gdisp_image_native.c
-Compiling gdisp_image_gif.c
-Compiling gdisp_image_bmp.c
-Compiling gdisp_image_jpg.c
-Compiling gdisp_image_png.c
-Compiling mf_encoding.c
-Compiling mf_font.c
-Compiling mf_justify.c
-Compiling mf_kerning.c
-Compiling mf_rlefont.c
-Compiling mf_bwfont.c
-Compiling mf_scaledfont.c
-Compiling mf_wordwrap.c
-Compiling gevent.c
-Compiling gtimer.c
-Compiling gwin.c
-Compiling gwin_widget.c
-Compiling gwin_wm.c
-Compiling gwin_console.c
-Compiling gwin_graph.c
-Compiling gwin_button.c
-Compiling gwin_slider.c
-Compiling gwin_checkbox.c
-Compiling gwin_image.c
-Compiling gwin_label.c
-Compiling gwin_radio.c
-Compiling gwin_list.c
-Compiling gwin_progressbar.c
-Compiling gwin_container.c
-Compiling gwin_frame.c
-Compiling gwin_tabset.c
-Compiling gwin_gl3d.c
-Compiling gwin_keyboard.c
-Compiling gwin_keyboard_layout.c
-Compiling gwin_textedit.c
-Compiling ginput.c
-Compiling ginput_mouse.c
-Compiling ginput_keyboard.c
-Compiling ginput_keyboard_microcode.c
-Compiling ginput_toggle.c
-Compiling ginput_dial.c
-Compiling gadc.c
-Compiling gaudio.c
-Compiling gmisc.c
-Compiling gmisc_arrayops.c
-Compiling gmisc_matrix2d.c
-Compiling gmisc_trig.c
-Compiling gfile.c
-Compiling gfile_fs_native.c
-Compiling gfile_fs_ram.c
-Compiling gfile_fs_rom.c
-Compiling gfile_fs_fatfs.c
-Compiling gfile_fs_petitfs.c
-Compiling gfile_fs_mem.c
-Compiling gfile_fs_chibios.c
-Compiling gfile_fs_strings.c
-Compiling gfile_printg.c
-Compiling gfile_scang.c
-Compiling gfile_stdio.c
-Compiling gfile_fatfs_wrapper.c
-Compiling gfile_fatfs_diskio_chibios.c
-Compiling gfile_petitfs_wrapper.c
-Compiling gfile_petitfs_diskio_chibios.c
-Compiling gtrans.c
-Compiling gdisp_lld_ED060SC4.c
-Compiling evtimer.c
-Compiling shell.c
-Compiling chprintf.c
-Compiling main.c
-Compiling board.c
-Compiling debug.c
-Compiling main_logic.c
-Compiling shell_commands.c
-src/shell_commands.c: In function 'cmd_temperature':
-src/shell_commands.c:110:70: warning: implicit declaration of function 'rtc_get' [-Wimplicit-function-declaration]
-         chprintf(chp, "%d mC, %d s ago, wireless=%d\n", temperature, rtc_get() - timestamp, wireless);
-                                                                      ^
-Compiling usb_usart.c
-src/usb_usart.c:295:5: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
-     (BaseChannel*)&SDU1,
-     ^
-src/usb_usart.c:295:5: note: (near initialization for 'usb_shellconfig.sc_channel')
-Compiling tempgraph.c
 Compiling display.c
-Compiling buttons.c
-Compiling ntc.c
-Compiling sensor_task.c
-Compiling stm32l_rtc.c
-Compiling battery.c
-Compiling beeper.c
-Compiling alarm_task.c
-Compiling powersave.c
+src/display.c: In function 'display_update_temperature':
+src/display.c:137:13: warning: unused variable 'timedelta' [-Wunused-variable]
+         int timedelta = 9999;
+             ^
+src/display.c:122:10: warning: unused variable 'wireless' [-Wunused-variable]
+     bool wireless, have_temp;
+          ^
+src/display.c:121:15: warning: unused variable 'time' [-Wunused-variable]
+     int temp, time;
+               ^
+src/display.c:121:9: warning: unused variable 'temp' [-Wunused-variable]
+     int temp, time;
+         ^
+src/display.c: In function 'draw_temp_digit':
+src/display.c:388:19: warning: unused variable 'charw' [-Wunused-variable]
+     const uint8_t charw[5] = {70, 75, 75, 35, 75};
+                   ^
+src/display.c: In function 'draw_gsr_digit':
+src/display.c:402:19: warning: unused variable 'charw' [-Wunused-variable]
+     const uint8_t charw[5] = {70, 75, 75, 35, 75};
+                   ^
+src/display.c: In function 'draw_pulse_digit':
+src/display.c:417:19: warning: unused variable 'charw' [-Wunused-variable]
+     const uint8_t charw[5] = {70, 75, 75, 35, 75};
+                   ^
+src/display.c: In function 'draw_pulse_digit2':
+src/display.c:436:19: warning: unused variable 'charw' [-Wunused-variable]
+     const uint8_t charw[5] = {70, 75, 75, 35, 75};
+                   ^
+src/display.c: In function 'draw_temp_digit2':
+src/display.c:454:19: warning: unused variable 'charw' [-Wunused-variable]
+     const uint8_t charw[5] = {70, 75, 75, 35, 75};
+                   ^
+src/display.c: In function 'display_full_redraw':
+src/display.c:602:10: warning: unused variable 'rate' [-Wunused-variable]
+      int rate=heart;
+          ^
+src/display.c: In function 'display_partial_redraw':
+src/display.c:716:13: warning: unused variable 'rate' [-Wunused-variable]
+         int rate=heart;
+             ^
+src/display.c: At top level:
+src/display.c:25:12: warning: 'rounding_div' defined but not used [-Wunused-function]
+ static int rounding_div(int n, int d)
+            ^
+src/display.c:247:13: warning: 'cull_samples' defined but not used [-Wunused-function]
+ static void cull_samples()
+             ^
+src/display.c:271:13: warning: 'update_ylimits' defined but not used [-Wunused-function]
+ static void update_ylimits()
+             ^
+src/display.c:288:13: warning: 'update_prediction' defined but not used [-Wunused-function]
+ static void update_prediction()
+             ^
+src/display.c:333:13: warning: 'update_alarmtime' defined but not used [-Wunused-function]
+ static void update_alarmtime()
+             ^
+src/display.c:452:13: warning: 'draw_temp_digit2' defined but not used [-Wunused-function]
+ static void draw_temp_digit2(int i, char c)
+             ^
+src/display.c:470:13: warning: 'draw_samples' defined but not used [-Wunused-function]
+ static void draw_samples(int start)
+             ^
+src/display.c:494:13: warning: 'draw_alarm' defined but not used [-Wunused-function]
+ static void draw_alarm(const char *alarm, bool white_on_black, bool full_clear)
+             ^
+src/display.c:521:13: warning: 'draw_alarmtime' defined but not used [-Wunused-function]
+ static void draw_alarmtime()
+             ^
+src/display.c:528:13: warning: 'draw_lowbatt' defined but not used [-Wunused-function]
+ static void draw_lowbatt()
+             ^
 Linking build/Eink-DISCOVERY.elf
 Creating build/Eink-DISCOVERY.hex
 Creating build/Eink-DISCOVERY.bin
 Creating build/Eink-DISCOVERY.dmp
 Done
 
-16:31:21 Build Finished (took 23s.231ms)
+17:56:39 Build Finished (took 1s.582ms)
 

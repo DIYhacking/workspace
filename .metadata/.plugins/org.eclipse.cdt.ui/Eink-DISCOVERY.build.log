@@ -1,8 +1,49 @@
-22:46:12 **** Clean-only build of configuration Default for project Eink-DISCOVERY ****
-make -j3 clean 
-Cleaning
-rm -fR .dep build
-Done
+20:40:35 **** Build of configuration Default for project Eink-DISCOVERY ****
+make -j3 all 
+Compiler Options
+arm-none-eabi-gcc -c -mcpu=cortex-m3 -DENABLE_DEBUG=0 -Os -g -gdwarf-2 -g3 -fno-omit-frame-pointer -fno-common -std=gnu99 -DEINK_WRITECOUNT=3 -DEINK_NUMBUFFERS=80 -ffunction-sections -fdata-sections -fno-common -Wall -Wa,-alms=build/lst/ -DTHUMB_PRESENT -mno-thumb-interwork -DTHUMB_NO_INTERWORKING -MD -MP -MF .dep/build.d -I. -Ichibios/os/ports/common/ARMCMx/CMSIS/include -Ichibios/os/ports/common/ARMCMx -Ichibios/os/ports/GCC/ARMCMx -Ichibios/os/ports/GCC/ARMCMx/STM32L1xx -Ichibios/os/kernel/include -Ichibios/os/hal/include -Ichibios/os/hal/platforms/STM32L1xx -Ichibios/os/hal/platforms/STM32 -Ichibios/os/hal/platforms/STM32/GPIOv2 -Ichibios/os/hal/platforms/STM32/I2Cv1 -Ichibios/os/hal/platforms/STM32/SPIv1 -Ichibios/os/hal/platforms/STM32/TIMv1 -Ichibios/os/hal/platforms/STM32/USARTv1 -Ichibios/os/hal/platforms/STM32/USBv1 -Iugfx -Iugfx/3rdparty/tinygl-0.4-ugfx/include -Iugfx/drivers/gdisp/ED060SC4 -Ichibios/os/various -Isrc -Ibaselibc/include main.c -o main.o
 
-22:46:13 Build Finished (took 864ms)
+mkdir -p build/obj
+mkdir -p build/lst
+Compiling crt0.c
+Compiling vectors.c
+Compiling chcore.c
+Compiling chcore_v7m.c
+Compiling nvic.c
+Compiling chsys.c
+Compiling chdebug.c
+Compiling chlists.c
+Compiling chvt.c
+Compiling chschd.c
+Compiling chthreads.c
+Compiling chdynamic.c
+Compiling chregistry.c
+Compiling chsem.c
+Compiling chmtx.c
+Compiling chcond.c
+Compiling chevents.c
+Compiling chmsg.c
+Compiling chmboxes.c
+Compiling chqueues.c
+Compiling chmemcore.c
+Compiling chheap.c
+Compiling chmempools.c
+Compiling hal.c
+Compiling adc.c
+Compiling can.c
+Compiling ext.c
+Compiling gpt.c
+Compiling i2c.c
+Compiling icu.c
+Compiling mac.c
+Compiling mmc_spi.c
+make: *** Deleting file `build/obj/icu.o'
+make: *** wait: Interrupted system call.  Stop.
+make: *** Waiting for unfinished jobs....
+make: *** [build/obj/mmc_spi.o] Terminated: 15
+make: *** [build/obj/mac.o] Terminated: 15
+make: *** [build/obj/icu.o] Terminated: 15
+Command canceled
+
+20:40:37 Build Cancelled (took 2s.591ms)
 
